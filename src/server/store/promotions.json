@@ -1,0 +1,6 @@
+{
+    "any": { "description": "Buy 5, Get 20% off the 5th experience","threshold":"5", "type":"percentage","value":"0.2" },
+    "teamBuildings": { "description": "Buy 2 for $1500","threshold":"2", "type":"amount", "value":"100" },
+    "wineTours|Picnics": { "description": "Buy 4, ONLY Pay for 3","threshold":"4","type":"event","value":"1","option":"cheapest" },
+    "picnics": { "description": "Buy 2, get 1 free","threshold":"2","type":"amount","value":"110" }
+  }

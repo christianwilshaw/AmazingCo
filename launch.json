@@ -1,0 +1,61 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Mocha (Test single file)",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+        "args": [
+            "--timeout",
+            "999999",
+            "--colors",
+            "--compilers",
+            "${file}"
+        ],
+        "port": 9229,
+        "sourceMaps": false,
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "openOnSessionStart"
+      },
+      {
+        "name": "mocha single file",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+        "stopOnEntry": false,
+        "args": ["${file}","--no-timeouts", "--colors","--inspect-brk=9229","-u","tdd","--compilers", "css:./src/test/utils/null-compiler,js:babel-core/register","--require","babel-core/register","--require","jsdom-global/register","--require","mocha-config.js"],
+        "cwd": "${workspaceRoot}",
+        "runtimeExecutable": null,
+        "env": {
+          "NODE_ENV": "testing"
+        }
+        },{
+        "type": "node",
+        "request": "launch",
+        "name": "Mocha All",
+        "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+        "args": [
+            "--timeout",
+            "999999",
+            "--colors",
+            "${workspaceFolder}/src/**/*-spec.jsx"
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "mocha all",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+      "stopOnEntry": false,
+      "args": ["./src/**/*-spec.js*","--no-timeouts", "--colors","--inspect-brk=9229","-u","tdd","--compilers", "css:./src/test/utils/null-compiler,js:babel-core/register","--require","mocha-config.js","--require","babel-core/register","--require","jsdom-global/register"],
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": null,
+      "env": {
+        "NODE_ENV": "testing"
+      }
+      }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "kidsParty": { "cost": "220" ,"currency":"AUD", "symbol":"$"},
+    "wineTour": { "cost": "440" ,"currency":"AUD","symbol":"$"},
+    "teamBuilding": { "cost": "800" ,"currency":"AUD","symbol":"$"},
+    "picnic": { "cost": "110" ,"currency":"AUD","symbol":"$"}
+  }
